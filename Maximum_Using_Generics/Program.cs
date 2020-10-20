@@ -6,7 +6,7 @@ namespace Maximum_Using_Generics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Welcome to Find Maximum Program");
         }
     }
 }
