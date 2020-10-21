@@ -8,11 +8,11 @@ namespace Maximum_Using_Generics
         {
             Console.WriteLine("Hello Welcome to Find Maximum Program");
             Console.WriteLine("enter the numbers");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
+            float a = float.Parse((Console.ReadLine()));
+            float b = float.Parse((Console.ReadLine())); 
+            float c = float.Parse((Console.ReadLine()));
             FindMaximum f = new FindMaximum();
-            Console.WriteLine("maximum of 3 numbers is: " + f.MaximumIntegerNumber(a, b, c));
+            Console.WriteLine("maximum of 3 numbers is: " + f.MaximumFloatNumber(a, b, c));
 
         }
     }
