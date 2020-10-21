@@ -9,8 +9,8 @@ namespace TestCases
     public class UnitTest1
     {
         [TestMethod]
-        [DataRow(100, 30,20)]
-        [DataRow(5,3,2)]
+        [DataRow(100, 30, 20)]
+        [DataRow(5, 3, 2)]
         public void GivenMaxValueAtFirstNumber_ShouldReturn_FirstNumberAsMaximum(int a, int b, int c)
         {
             var expected = a;
@@ -26,7 +26,7 @@ namespace TestCases
         {
             var expected = b;
             FindMaximum f = new FindMaximum();
-            int actual = f.MaximumIntegerNumber(a,b,c);
+            int actual = f.MaximumIntegerNumber(a, b, c);
             Assert.AreEqual(expected, actual);
         }
 
@@ -38,7 +38,7 @@ namespace TestCases
         {
             var expected = c;
             FindMaximum f = new FindMaximum();
-            int actual = f.MaximumIntegerNumber(a,b,c);
+            int actual = f.MaximumIntegerNumber(a, b, c);
             Assert.AreEqual(expected, actual);
         }
 
@@ -77,7 +77,40 @@ namespace TestCases
         }
 
 
+        [TestMethod]
+        [DataRow("xenon", "apple", "bot")]
+        [DataRow("riya", "raghav", "rewati")]
+        public void GivenMaxStringValueAtFirstPlace_ShouldReturn_FirstString(string a, string b, string c)
+        {
+            var expected = a;
+            FindMaximum f = new FindMaximum();
+            string actual = f.MaximumStringNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
 
+        [TestMethod]
+        [DataRow("xenon", "zapple", "bot")]
+        [DataRow("riya", "vraghav", "rewati")]
+        public void GivenMaxStringValueAtSecondPlace_ShouldReturn_SecondString(string a, string b, string c)
+        {
+            var expected = b;
+            FindMaximum f = new FindMaximum();
+            string actual = f.MaximumStringNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        [DataRow("xenon", "apple", "ybot")]
+        [DataRow("riya", "raghav", "zrewati")]
+        public void GivenMaxStringValueAtThirdPlace_ShouldReturn_ThirdString(string a, string b, string c)
+        {
+            var expected = c;
+            FindMaximum f = new FindMaximum();
+            string actual = f.MaximumStringNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
     }
-
 }
+
+
