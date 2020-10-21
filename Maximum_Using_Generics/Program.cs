@@ -15,8 +15,8 @@ namespace Maximum_Using_Generics
                 int b = Convert.ToInt32(Console.ReadLine());
                 int c = Convert.ToInt32(Console.ReadLine());
                 FindMaximum f = new FindMaximum();
-                Console.WriteLine("maximum of 3 numbers is: ");
-                f.Maximum<int>(a, b, c);
+                Console.WriteLine("maximum of 3 is: "+ f.Maximum<int>(a, b, c));
+                
             }
 
             if (k == 2)
@@ -25,8 +25,8 @@ namespace Maximum_Using_Generics
                 float b = float.Parse(Console.ReadLine());
                 float c = float.Parse(Console.ReadLine());
                 FindMaximum f = new FindMaximum();
-                Console.WriteLine("maximum of 3 numbers is: ");
-                f.Maximum<float>(a, b, c);
+                Console.WriteLine("maximum of 3 is: " + f.Maximum<float>(a, b, c));
+               
             }
 
             if (k == 3)
@@ -35,8 +35,8 @@ namespace Maximum_Using_Generics
                 string b = Console.ReadLine();
                 string c = Console.ReadLine();
                 FindMaximum f = new FindMaximum();
-                Console.WriteLine("maximum of 3 numbers is: ");
-                f.Maximum<string>(a, b, c);
+                Console.WriteLine("maximum of 3 is: "+ f.Maximum<string>(a, b, c));
+                
             }
 
 

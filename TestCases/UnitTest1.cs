@@ -110,6 +110,41 @@ namespace TestCases
             string actual = f.MaximumStringNumber(a, b, c);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [DataRow("xenon", "apple", "ybot")]
+        [DataRow("riya", "raghav", "zrewati")]
+        public void GivenMaxStringValueAtThirdPlace_ShouldReturn_ThirdString_UsingGenerics(string a, string b, string c)
+        {
+            var expected = c;
+            FindMaximum f = new FindMaximum();
+            string actual = f.Maximum<string>(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        [DataRow(134.8F, 220.78F, 1100.0F)]
+        [DataRow(51.98F, 354.67F, 536.78F)]
+        public void GivenMaxFloatValueAtThirdPlace_ShouldReturn_ThirdNumber_UsingGenerics(float a, float b, float c)
+        {
+            var expected = c;
+            FindMaximum f = new FindMaximum();
+            float actual = f.Maximum<float>(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        [DataRow(34, 20, 100)]
+        [DataRow(651, 354, 5678)]
+        public void GivenMaxValueAtThirdPlace_Should_ReturnThirdNumber_UsingGenerics(int a, int b, int c)
+        {
+            var expected = c;
+            FindMaximum f = new FindMaximum();
+            int actual = f.Maximum<int>(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
 
