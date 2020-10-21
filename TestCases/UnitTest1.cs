@@ -22,7 +22,7 @@ namespace TestCases
         [TestMethod]
         [DataRow(104, 123, 18)]
         [DataRow(651, 5693, 724)]
-        public void GivenMaxValueAtSecondPlace_WhenChecked_Should_ReturnSecondNumber(int a, int b, int c)
+        public void GivenMaxValueAtSecondPlace_Should_ReturnSecondNumber(int a, int b, int c)
         {
             var expected = b;
             FindMaximum f = new FindMaximum();
@@ -34,7 +34,7 @@ namespace TestCases
         [TestMethod]
         [DataRow(34, 20, 100)]
         [DataRow(651, 354, 5678)]
-        public void GivenMaxValueAtThirdPlace_WhenChecked_Should_ReturnThirdNumber(int a, int b, int c)
+        public void GivenMaxValueAtThirdPlace_Should_ReturnThirdNumber(int a, int b, int c)
         {
             var expected = c;
             FindMaximum f = new FindMaximum();
@@ -42,7 +42,42 @@ namespace TestCases
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        [DataRow(134.8F, 20.78F, 100.0F)]
+        [DataRow(651.98F, 354.67F, 56.78F)]
+        public void GivenMaxFloatValueAtFirstPlace_ShouldReturn_FirstNumber(float a, float b, float c)
+        {
+            var expected = a;
+            FindMaximum f = new FindMaximum();
+            float actual = f.MaximumFloatNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [DataRow(134.8F, 220.78F, 100.0F)]
+        [DataRow(51.98F, 354.67F, 56.78F)]
+        public void GivenMaxFloatValueAtSecondPlace_ShouldReturn_SecondNumber(float a, float b, float c)
+        {
+            var expected = b;
+            FindMaximum f = new FindMaximum();
+            float actual = f.MaximumFloatNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        [DataRow(134.8F, 220.78F, 1100.0F)]
+        [DataRow(51.98F, 354.67F, 536.78F)]
+        public void GivenMaxFloatValueAtThirdPlace_ShouldReturn_ThirdNumber(float a, float b, float c)
+        {
+            var expected = c;
+            FindMaximum f = new FindMaximum();
+            float actual = f.MaximumFloatNumber(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+
 
     }
-    
+
 }
