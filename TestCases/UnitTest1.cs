@@ -148,39 +148,34 @@ namespace TestCases
 
 
         [TestMethod]
-        [DataRow(34, 20, 100)]
-        [DataRow(651, 354, 5678)]
-        public void GivenMaxValueAtThirdPlace_Should_ReturnThirdNumber_UsingGenericsClass(int a, int b, int c)
+        public void GivenMaxIntArray_Should_ReturnMaxInt_UsingGenericsClass()
         {
-            var expected = c;
-            GenericClass<int> f = new GenericClass<int>(a,b,c);
-            int actual = f.Maximum();
+            GenericClass<int> f = new GenericClass<int>(new int[] { 10, 12, 3, 9, 34, 019, 67, 98 });
+            int actual = f.MaxMethod();
+            int expected = 98;
             Assert.AreEqual(expected, actual);
         }
 
 
         [TestMethod]
-        [DataRow(134.8F, 220.78F, 1100.0F)]
-        [DataRow(51.98F, 354.67F, 536.78F)]
-        public void GivenMaxFloatValueAtThirdPlace_ShouldReturn_ThirdNumber_UsingGenericsClass(float a, float b, float c)
+        public void GivenMaxFloatArray_Should_ReturnMaxNumber_UsingGenericsClass()
         {
-            var expected = c;
-            GenericClass<float> f = new GenericClass<float>(a,b,c);
-            float actual = f.Maximum();
+            GenericClass<float> f = new GenericClass<float>(new float[] { 18.0F, 12.87F, 3,98F, 49.87F, 34.5F, 019.45F, 67.87F, 98.89F });
+            float actual = f.MaxMethod();
+            float expected = 98.89F;
             Assert.AreEqual(expected, actual);
         }
 
 
         [TestMethod]
-        [DataRow("xenon", "apple", "ybot")]
-        [DataRow("riya", "raghav", "zrewati")]
-        public void GivenMaxStringValueAtThirdPlace_ShouldReturn_ThirdString_UsingGenericsClass(string a, string b, string c)
+        public void GivenMaxStringArray_Should_ReturnMaxString_UsingGenericsClass()
         {
-            var expected = c;
-            GenericClass<string> f = new GenericClass<string>(a,b,c);
-            string actual = f.Maximum();
+            GenericClass<string> f = new GenericClass<string>(new string[] { "riya", "kishan", "rewant", "seema", "anu", "rewati", "zeal", "rishank" });
+            string actual = f.MaxMethod();
+            string expected = "zeal";
             Assert.AreEqual(expected, actual);
         }
+
 
 
     }
